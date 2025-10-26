@@ -16,7 +16,7 @@
     @include('components.layouts.header')
 
     <!-- SECTION HERO -->
-    <section id="home" class="relative min-h-screen pt-32 flex items-center justify-between overflow-hidden">
+    <section id="home" class="reveal relative min-h-screen pt-32 flex items-center justify-between overflow-hidden">
         <!-- Background image + overlay -->
         <img src="images/banner.svg" class="absolute inset-0 bg-cover w-full" />
         <div class="absolute inset-0 bg-[#B64F0B]/70"></div>
@@ -39,24 +39,24 @@
         </div>
         <!-- Deretan gambar menu -->
         <div
-            class="absolute left-0 bottom-52 z-10 h-28 bg-[#ff8c00] px-8  rounded-r-xl flex items-center justify-start gap-x-7 shadow-lg overflow-visible">
-            <div class="relative">
+            class="reveal absolute left-0 bottom-52 z-10 h-28 bg-[#ff8c00] px-8  rounded-r-xl flex items-center justify-start gap-x-7 shadow-lg overflow-visible">
+            <div class="reveal relative">
                 <img src="images/bala-bala.svg" class="w-56 h-5w-56 rounded-full object-cover roll" />
             </div>
-            <div class="relative">
+            <div class="reveal relative">
                 <img src="https://lh3.googleusercontent.com/gps-cs-s/AG0ilSxV-jM9bPDEb-99FS52kdqqzixoyaOvopRvN4CQe33IfLPCZY0cXSITjIu9EMRzcTs84kqC_aNzR_wTiAF4kCvAYaXYY0314a2E5DkvWZiLSC-_zTHbTdsbIRmL7BljZiBkdu-bWQ=s1360-w1360-h1020-rw"
                     class="w-44 h-44 rounded-full object-cover hover-roll" />
             </div>
-            <div class="relative">
+            <div class="reveal relative">
                 <img src="images/molen.svg" class="w-44 h-44 rounded-full object-cover hover-roll" />
             </div>
-            <div class="relative">
+            <div class="reveal relative">
                 <img src="images/cakue.svg" class="w-44 h-44 rounded-full object-cover hover-roll" />
             </div>
         </div>
 
         <!-- Konten kanan -->
-        <div class="relative z-10 w-1/2 flex justify-end left-10 ">
+        <div class="reveal relative z-10 w-1/2 flex justify-end left-10 ">
             <img src="images/roti-goreng.svg" class="w-[50rem] h-[50rem] object-cover rounded-lg" />
         </div>
 
@@ -64,13 +64,13 @@
         <div class="absolute bottom-0 left-0 w-full h-44 fade-bottom"></div>
     </section>
 
-    <div class="relative bottom-0 left-0 mb-32">
+    <div class="bottom-0 left-0 mb-32">
         <div class="absolute top-0 left-0 w-full h-32 fade-top z-0"></div>
     </div>
 
     {{-- about section --}}
-    <section id="tentang-kami">
-        <div class="relative flex justify-end z-10 pt-28">
+    <section id="tentang-kami" class="reveal">
+        <div class="reveal relative flex justify-end z-10 pt-28">
             <button
                 class="px-16 uppercase py-5 text-white bg-[#FF9D23] text-4xl font-bold rounded-bl-full shadow-lg hover:bg-white hover:text-orange-400 transition"
                 style="transition: all 0.3s ease;" onmouseover="this.style.textShadow='none'"
@@ -78,7 +78,7 @@
                 tentang kami
             </button>
         </div>
-        <div class="container flex justify-between items-center mt-20 gap-x-20">
+        <div class="reveal container flex justify-between items-center mt-20 gap-x-20">
             <div class="relative w-[150rem] h-[700px] flex items-center justify-center overflow-hidden">
                 <!-- Slides -->
                 <div class="relative w-full h-full">
@@ -132,12 +132,12 @@
         </div>
     </section>
 
-    <div class="relative ">
+    <div class="reveal relative ">
         <img src="images/element-kanan.svg"
             class="animate-float absolute right-0 -top-20 w-80  object-cover rounded-lg" />
     </div>
     {{-- animate-float  Menu Section --}}
-    <section id="menu" class="mt-20 bg-[#C14600]">
+    <section id="menu" class="reveal mt-20 bg-[#C14600] reveal">
         <div class="flex justify-start pt-28">
             <span class="w-1/5 h-14 rounded-r-4xl flex items-center bg-orange-200">
                 <button
@@ -151,7 +151,7 @@
 
         {{-- CARD MENU RESPONSIF & INTERAKTIF --}}
         <div
-            class="container mx-auto px-6 py-20 my-32 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-10 gap-y-24">
+            class="reveal container mx-auto px-6 py-20 my-32 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-10 gap-y-24">
             {{-- CARD MENU 1 --}}
             <div
                 class="bg-[#FCE9D1] rounded-2xl shadow-lg p-6 text-left space-y-4 transform transition-all duration-500 hover:-translate-y-3 hover:scale-105 hover:shadow-[0_0_25px_rgba(255,157,35,0.4)]">
@@ -265,7 +265,7 @@
 
 
         {{-- lokasi --}}
-        <section class="relative mt-96">
+        <section class="relative mt-96 reveal">
             <!-- BAGIAN ATAS -->
             <img id="lokasi" src="images/roti-goreng-aja.svg" alt="Roti Goreng"
                 class="absolute -top-56 left-1/2 -translate-x-1/2 w-96 h-96 opacity-90 roll">
@@ -329,7 +329,7 @@
         </section>
 
         {{-- contact us --}}
-        <section id="kontak" class="relative w-full overflow-hidden -mt-48 md:-mt-44 lg:-mt-48">
+        <section id="kontak" class="reveal relative w-full overflow-hidden -mt-48 md:-mt-44 lg:-mt-48">
             <!-- Judul di atas -->
             <div class="w-full bg-[#FF9D23] flex items-center justify-center py-10"
                 style="box-shadow: 2px 2px 10px #682907;">
@@ -458,6 +458,18 @@
 
 
         updateCarousel();
+
+        // Scroll Reveal Effect
+        const reveals = document.querySelectorAll(".reveal");
+
+        window.addEventListener("scroll", () => {
+            for (const el of reveals) {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 100) {
+                    el.classList.add("active");
+                }
+            }
+        });
     </script>
 </body>
 

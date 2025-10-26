@@ -32,6 +32,17 @@ html {
     scroll-behavior: smooth;
 }
 
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* Animasi rotasi */
 @keyframes roll {
     0% {
@@ -113,16 +124,15 @@ html {
 
 /* animasi denyut */
 @keyframes pulse-slow {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
 }
 
 .animate-pulse-slow {
-  animation: pulse-slow 1s ease-in-out infinite;
+    animation: pulse-slow 1s ease-in-out infinite;
 }
-
-
