@@ -11,7 +11,7 @@
         <ul class="flex items-center gap-x-10 font-semibold text-white/90 text-lg mr-20 ">
             <li class="flex items-center flex-col group">
                 <a href="#home"
-                    class="hover:text-white hover:text-shadow-[0_0_5px_rgba(255,255,255,0.8)] transition duration-300">Home</a>
+                    class="hover:text-white hover:text-shadow-[0_0_5px_rgba(255,255,255,0.8)] transition duration-300">Beranda</a>
                 <span
                     class="bg-white/80 w-0 h-1 rounded-full transition-all duration-300 group-hover:w-[60%] group-hover:bg-white group-hover:shadow-[0_0_10px_rgba(255,255,255,0.8)]"></span>
             </li>
