@@ -4,12 +4,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 
 <body>
     @include('components.layouts.header')
@@ -131,10 +132,13 @@
         </div>
     </section>
 
+    <div class="relative ">
+        <img src="images/element-kanan.svg" class="absolute right-0 -top-20 w-72  object-cover rounded-lg" />
+    </div>
     {{-- Menu Section --}}
-    <section id="menu" class="mt-20">
-        <div class="relative flex justify-start z-10 pt-28">
-            <span class="w-64 bg-orange-200">
+    <section id="menu" class="mt-20 bg-[#C14600]">
+        <div class="flex justify-start pt-28">
+            <span class="w-1/5 h-14 rounded-r-4xl flex items-center bg-orange-200">
                 <button
                     class="px-16 uppercase py-5 text-white bg-[#FF9D23] text-4xl font-bold rounded-br-full shadow-lg hover:bg-white hover:text-orange-400 transition"
                     style="transition: all 0.3s ease;" onmouseover="this.style.textShadow='none'"
@@ -143,7 +147,229 @@
                 </button>
             </span>
         </div>
+
+        {{-- card menu --}}
+        <div class="container flex flex-wrap justify-center items-center gap-x-14 gap-y-24 ">
+            {{-- card menu 1 --}}
+            <div class="max-w-md bg-[#FCE9D1] rounded-2xl shadow-lg p-6 text-left space-y-4">
+                <!-- Gambar -->
+                <div
+                    class="w-52 h-52 rounded-full flex flex-col items-center mx-auto justify-center overflow-hidden shadow-md -mt-20 border-4 border-[#FCE9D1]">
+                    <img src="images/bakwan.svg" alt="Bakwan"
+                        class="w-full bg-white p-7 rounded-4xl h-full object-cover">
+                </div>
+
+                <!-- Nama Makanan -->
+                <h2 class="text-2xl font-extrabold text-[#A94E04] drop-shadow-[1px_1px_1px_#fff]">Bakwan</h2>
+
+                <!-- Deskripsi -->
+                <p class="text-[#7A3B0C] text-sm leading-relaxed">
+                    Bakwan gurih dengan kombinasi sayuran segar dan adonan renyah, memberikan sensasi rasa yang lezat
+                    dan
+                    cocok untuk teman makan.
+                </p>
+
+                <!-- Harga -->
+                <p class="font-semibold text-[#7A3B0C]">Harga: Rp. 2000,00</p>
+
+                <!-- Tombol -->
+                <button
+                    class="bg-[#FF9D23] hover:bg-[#ffb648] text-white w-full font-bold py-2 px-6 rounded-lg shadow-md transition duration-300">
+                    Pesan Sekarang
+                </button>
+            </div>
+            {{-- card menu 2 --}}
+            <div class="max-w-md bg-[#FCE9D1] rounded-2xl shadow-lg p-6 text-left space-y-4">
+                <!-- Gambar -->
+                <div
+                    class="w-52 h-52 rounded-full flex flex-col items-center mx-auto justify-center overflow-hidden shadow-md -mt-20 border-4 border-[#FCE9D1]">
+                    <img src="images/bakwan.svg" alt="Bakwan"
+                        class="w-full bg-white p-7 rounded-4xl h-full object-cover">
+                </div>
+
+                <!-- Nama Makanan -->
+                <h2 class="text-2xl font-extrabold text-[#A94E04] drop-shadow-[1px_1px_1px_#fff]">Bakwan</h2>
+
+                <!-- Deskripsi -->
+                <p class="text-[#7A3B0C] text-sm leading-relaxed">
+                    Bakwan gurih dengan kombinasi sayuran segar dan adonan renyah, memberikan sensasi rasa yang lezat
+                    dan
+                    cocok untuk teman makan.
+                </p>
+
+                <!-- Harga -->
+                <p class="font-semibold text-[#7A3B0C]">Harga: Rp. 2000,00</p>
+
+                <!-- Tombol -->
+                <button
+                    class="bg-[#FF9D23] hover:bg-[#ffb648] text-white w-full font-bold py-2 px-6 rounded-lg shadow-md transition duration-300">
+                    Pesan Sekarang
+                </button>
+            </div>
+            {{-- card menu 3 --}}
+            <div class="max-w-md bg-[#FCE9D1] rounded-2xl shadow-lg p-6 text-left space-y-4">
+                <!-- Gambar -->
+                <div
+                    class="w-52 h-52 rounded-full flex flex-col items-center mx-auto justify-center overflow-hidden shadow-md -mt-20 border-4 border-[#FCE9D1]">
+                    <img src="images/bakwan.svg" alt="Bakwan"
+                        class="w-full bg-white p-7 rounded-4xl h-full object-cover">
+                </div>
+
+                <!-- Nama Makanan -->
+                <h2 class="text-2xl font-extrabold text-[#A94E04] drop-shadow-[1px_1px_1px_#fff]">Bakwan</h2>
+
+                <!-- Deskripsi -->
+                <p class="text-[#7A3B0C] text-sm leading-relaxed">
+                    Bakwan gurih dengan kombinasi sayuran segar dan adonan renyah, memberikan sensasi rasa yang lezat
+                    dan
+                    cocok untuk teman makan.
+                </p>
+
+                <!-- Harga -->
+                <p class="font-semibold text-[#7A3B0C]">Harga: Rp. 2000,00</p>
+
+                <!-- Tombol -->
+                <button
+                    class="bg-[#FF9D23] hover:bg-[#ffb648] text-white w-full font-bold py-2 px-6 rounded-lg shadow-md transition duration-300">
+                    Pesan Sekarang
+                </button>
+            </div>
+            {{-- card menu 4 --}}
+            <div class="max-w-md bg-[#FCE9D1] rounded-2xl shadow-lg p-6 text-left space-y-4">
+                <!-- Gambar -->
+                <div
+                    class="w-52 h-52 rounded-full flex flex-col items-center mx-auto justify-center overflow-hidden shadow-md -mt-20 border-4 border-[#FCE9D1]">
+                    <img src="images/bakwan.svg" alt="Bakwan"
+                        class="w-full bg-white p-7 rounded-4xl h-full object-cover">
+                </div>
+
+                <!-- Nama Makanan -->
+                <h2 class="text-2xl font-extrabold text-[#A94E04] drop-shadow-[1px_1px_1px_#fff]">Bakwan</h2>
+
+                <!-- Deskripsi -->
+                <p class="text-[#7A3B0C] text-sm leading-relaxed">
+                    Bakwan gurih dengan kombinasi sayuran segar dan adonan renyah, memberikan sensasi rasa yang lezat
+                    dan
+                    cocok untuk teman makan.
+                </p>
+
+                <!-- Harga -->
+                <p class="font-semibold text-[#7A3B0C]">Harga: Rp. 2000,00</p>
+
+                <!-- Tombol -->
+                <button
+                    class="bg-[#FF9D23] hover:bg-[#ffb648] text-white w-full font-bold py-2 px-6 rounded-lg shadow-md transition duration-300">
+                    Pesan Sekarang
+                </button>
+            </div>
+        </div>
+        <div class="relative ">
+            <img src="images/element-kiri.svg" class="absolute left-0 -top-20 w-72  object-cover rounded-lg" />
+        </div>
+
+
+        {{-- lokasi --}}
+        <section class="relative mt-96">
+            <!-- BAGIAN ATAS -->
+            <img id="lokasi" src="images/roti-goreng-aja.svg" alt="Roti Goreng"
+                class="absolute -top-56 left-1/2 -translate-x-1/2 w-96 h-96 opacity-90">
+            <div class="relative h-40 bg-[#ff9c2378] -skew-y-10 flex items-center justify-center">
+                <span class="relative text-white pb-10 font-extrabold text-5xl tracking-wider uppercase">Lokasi</span>
+            </div>
+            <div class="relative ">
+                <img src="images/element-kanan.svg"
+                    class="absolute z-11 right-0 -bottom-10 w-80  object-cover rounded-lg" />
+            </div>
+            <!-- BAGIAN BAWAH -->
+            <div class="relative bg-[#f5eee7] -mt-10 -skew-y-10 pt-44 pb-96">
+                <div class="skew-y-10 container mx-auto flex flex-col md:flex-row items-center gap-14 px-6">
+                    <!-- MAP -->
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.396837376274!2d112.6091746!3d-7.957877799999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7883762b863e49%3A0x97c724c305cc7397!2sCakwe%20dan%20Roti%20Goreng%20Bantal%20Jaya%20Pak%20Ali!5e0!3m2!1sen!2sid!4v1761470888064!5m2!1sen!2sid"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                        class="rounded-xl w-full h-[500px] shadow-lg">
+                    </iframe>
+
+                    <!-- DESKRIPSI -->
+                    <div class="space-y-5 text-gray-800">
+
+                        <!-- Alamat -->
+                        <div>
+                            <span class="flex items-center gap-x-2">
+                                <i class="fa-solid fa-location-dot text-orange-600 text-xl"></i>
+                                <h3 class="text-lg font-semibold text-orange-700">Alamat</h3>
+                            </span>
+                            <p class="text-[#454545] ml-7">
+                                Jl. Sigura - Gura, Sumbersari, Kec. Lowokwaru, Kota Malang, Jawa Timur 65145
+                            </p>
+                        </div>
+
+                        <!-- Jam Operasional -->
+                        <div>
+                            <span class="flex items-center gap-x-2">
+                                <i class="fa-solid fa-clock text-orange-600 text-xl"></i>
+                                <h3 class="text-lg font-semibold text-orange-700">Jam Operasional</h3>
+                            </span>
+                            <p class="text-[#454545] ml-7">
+                                06.00 - 10.00 WIB
+                            </p>
+                        </div>
+
+                        <!-- GoFood -->
+                        <div>
+                            <span class="flex items-center gap-x-2">
+                                <i class="fa-solid fa-utensils text-orange-600 text-xl"></i>
+                                <h3 class="text-lg font-semibold text-orange-700">GoFood</h3>
+                            </span>
+                            <p class="text-[#454545] ml-7">
+                                <a href="https://gofood.co.id/malang/restaurant/roti-goreng-cakwe-mas-ali-9685c91b-c371-4583-8278-9d7c8c50ab8b"
+                                    class="text-orange-500 hover:underline">Roti Goreng Cakwe Mas Ali</a>
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {{-- contact us --}}
+        <section id="kontak" class="relative w-full overflow-hidden -mt-48 md:-mt-44 lg:-mt-48">
+            <!-- Judul di atas -->
+            <div class="w-full bg-[#FF9D23] flex items-center justify-center py-10"
+                style="box-shadow: 2px 2px 10px #682907;">
+                <span class="text-white font-extrabold text-4xl uppercase">Kontak Kami</span>
+            </div>
+
+            <!-- Background dan konten -->
+            <div class="relative w-full bg-cover bg-center overflow-hidden"
+                style="background-image: url('images/banner-2.svg');">
+
+                <!-- Overlay oranye transparan -->
+                <div class="absolute inset-0 bg-[#c14700c0]"></div>
+
+                <!-- Konten utama -->
+                <div class="relative flex flex-col items-center justify-center text-center text-white py-24 md:py-44">
+                    <!-- QR Code -->
+                    <div class="bg-[#FF9D23] p-7 rounded-2xl shadow-lg">
+                        <img src="images/nomor.svg" alt="QR Code" class="w-64 h-64 object-cover rounded-lg">
+                    </div>
+
+                    <!-- Tombol WhatsApp -->
+                    <a href="https://wa.me/6285158329255?text=Halo%20saya%20ingin%20tanya%20mengenai%20pemesanan%20Cakwe%20dan%20Roti%20Goreng%20Bantal%20Jaya%20Pak%20Ali%2C%20apa%20bisa%3F"
+                        class="mt-5 inline-flex items-center gap-x-2 bg-white text-orange-700 font-semibold px-20 py-3 rounded-full shadow-md hover:bg-orange-50 transition"
+                        target="_blank">
+                        <i class="fa-brands fa-whatsapp text-green-500 text-4xl"></i>
+                        <p class="text-xl">Pesan Sekarang!</p>
+                    </a>
+
+
+                </div>
+            </div>
+        </section>
     </section>
+
+    {{-- footer --}}
+    @include('components.layouts.footer')
 
     @if (Route::has('login'))
         <div class="h-14.5 hidden lg:block"></div>
