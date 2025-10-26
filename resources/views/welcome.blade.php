@@ -133,9 +133,10 @@
     </section>
 
     <div class="relative ">
-        <img src="images/element-kanan.svg" class="absolute right-0 -top-20 w-72  object-cover rounded-lg" />
+        <img src="images/element-kanan.svg"
+            class="animate-float absolute right-0 -top-20 w-80  object-cover rounded-lg" />
     </div>
-    {{-- Menu Section --}}
+    {{-- animate-float  Menu Section --}}
     <section id="menu" class="mt-20 bg-[#C14600]">
         <div class="flex justify-start pt-28">
             <span class="w-1/5 h-14 rounded-r-4xl flex items-center bg-orange-200">
@@ -148,137 +149,132 @@
             </span>
         </div>
 
-        {{-- card menu --}}
-        <div class="container flex flex-wrap justify-center items-center gap-x-14 gap-y-24 ">
-            {{-- card menu 1 --}}
-            <div class="max-w-md bg-[#FCE9D1] rounded-2xl shadow-lg p-6 text-left space-y-4">
+        {{-- CARD MENU RESPONSIF & INTERAKTIF --}}
+        <div
+            class="container mx-auto px-6 py-20 my-32 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-10 gap-y-24">
+            {{-- CARD MENU 1 --}}
+            <div
+                class="bg-[#FCE9D1] rounded-2xl shadow-lg p-6 text-left space-y-4 transform transition-all duration-500 hover:-translate-y-3 hover:scale-105 hover:shadow-[0_0_25px_rgba(255,157,35,0.4)]">
                 <!-- Gambar -->
                 <div
-                    class="w-52 h-52 rounded-full flex flex-col items-center mx-auto justify-center overflow-hidden shadow-md -mt-20 border-4 border-[#FCE9D1]">
+                    class="w-52 h-52 rounded-full flex flex-col items-center mx-auto justify-center overflow-hidden shadow-md -mt-20 border-4 border-[#FCE9D1] transition-transform duration-500 hover:scale-110">
                     <img src="images/bakwan.svg" alt="Bakwan"
-                        class="w-full bg-white p-7 rounded-4xl h-full object-cover">
+                        class="roll w-full bg-white p-7 rounded-4xl h-full object-cover transition-transform duration-500 hover:scale-110">
                 </div>
 
                 <!-- Nama Makanan -->
-                <h2 class="text-2xl font-extrabold text-[#A94E04] drop-shadow-[1px_1px_1px_#fff]">Bakwan</h2>
+                <h2
+                    class="text-2xl font-extrabold text-[#A94E04] drop-shadow-[1px_1px_1px_#fff] transition-colors duration-300 hover:text-[#FF9D23]">
+                    Bakwan
+                </h2>
 
                 <!-- Deskripsi -->
                 <p class="text-[#7A3B0C] text-sm leading-relaxed">
                     Bakwan gurih dengan kombinasi sayuran segar dan adonan renyah, memberikan sensasi rasa yang lezat
-                    dan
-                    cocok untuk teman makan.
+                    dan cocok
+                    untuk teman makan.
                 </p>
 
                 <!-- Harga -->
                 <p class="font-semibold text-[#7A3B0C]">Harga: Rp. 2000,00</p>
 
                 <!-- Tombol -->
-                <button
-                    class="bg-[#FF9D23] hover:bg-[#ffb648] text-white w-full font-bold py-2 px-6 rounded-lg shadow-md transition duration-300">
+                <a href="https://wa.me/6285158329255?text=Halo%20saya%20ingin%20tanya%20mengenai%20pemesanan%20Cakwe%20dan%20Roti%20Goreng%20Bantal%20Jaya%20Pak%20Ali%2C%20apa%20bisa%3F"
+                    target="_blank"
+                    class="block bg-gradient-to-r from-[#FF9D23] to-[#FFB648] hover:from-[#ffa737] hover:to-[#ffc76d] text-white font-bold py-2 px-6 rounded-lg shadow-md transition-all duration-300 text-center hover:scale-105 hover:shadow-lg hover:-translate-y-1 active:scale-95">
                     Pesan Sekarang
-                </button>
+                </a>
             </div>
-            {{-- card menu 2 --}}
-            <div class="max-w-md bg-[#FCE9D1] rounded-2xl shadow-lg p-6 text-left space-y-4">
-                <!-- Gambar -->
+
+            {{-- CARD MENU 2 --}}
+            <div
+                class="bg-[#FCE9D1] rounded-2xl shadow-lg p-6 text-left space-y-4 transform transition-all duration-500 hover:-translate-y-3 hover:scale-105 hover:shadow-[0_0_25px_rgba(255,157,35,0.4)]">
                 <div
-                    class="w-52 h-52 rounded-full flex flex-col items-center mx-auto justify-center overflow-hidden shadow-md -mt-20 border-4 border-[#FCE9D1]">
-                    <img src="images/bakwan.svg" alt="Bakwan"
-                        class="w-full bg-white p-7 rounded-4xl h-full object-cover">
+                    class="w-52 h-52 rounded-full flex flex-col items-center mx-auto justify-center overflow-hidden shadow-md -mt-20 border-4 border-[#FCE9D1] transition-transform duration-500 hover:scale-110">
+                    <img src="images/cakue.svg" alt="Cakue"
+                        class="roll w-full bg-white p-7 rounded-4xl h-[400px] object-cover transition-transform duration-500 hover:scale-110">
                 </div>
-
-                <!-- Nama Makanan -->
-                <h2 class="text-2xl font-extrabold text-[#A94E04] drop-shadow-[1px_1px_1px_#fff]">Bakwan</h2>
-
-                <!-- Deskripsi -->
+                <h2
+                    class="text-2xl font-extrabold text-[#A94E04] drop-shadow-[1px_1px_1px_#fff] transition-colors duration-300 hover:text-[#FF9D23]">
+                    Cakue
+                </h2>
                 <p class="text-[#7A3B0C] text-sm leading-relaxed">
-                    Bakwan gurih dengan kombinasi sayuran segar dan adonan renyah, memberikan sensasi rasa yang lezat
-                    dan
-                    cocok untuk teman makan.
+                    Cakue dengan isian sayur segar dan sambal pedas khas yang menggugah selera, cocok untuk camilan
+                    sore hari.
                 </p>
-
-                <!-- Harga -->
-                <p class="font-semibold text-[#7A3B0C]">Harga: Rp. 2000,00</p>
-
-                <!-- Tombol -->
-                <button
-                    class="bg-[#FF9D23] hover:bg-[#ffb648] text-white w-full font-bold py-2 px-6 rounded-lg shadow-md transition duration-300">
+                <p class="font-semibold text-[#7A3B0C]">Harga: Rp. 2500,00</p>
+                <a href="https://wa.me/6285158329255?text=Halo%20saya%20ingin%20tanya%20mengenai%20pemesanan%20Cakwe%20dan%20Roti%20Goreng%20Bantal%20Jaya%20Pak%20Ali%2C%20apa%20bisa%3F"
+                    target="_blank"
+                    class="block bg-gradient-to-r from-[#FF9D23] to-[#FFB648] hover:from-[#ffa737] hover:to-[#ffc76d] text-white font-bold py-2 px-6 rounded-lg shadow-md transition-all duration-300 text-center hover:scale-105 hover:shadow-lg hover:-translate-y-1 active:scale-95">
                     Pesan Sekarang
-                </button>
+                </a>
             </div>
-            {{-- card menu 3 --}}
-            <div class="max-w-md bg-[#FCE9D1] rounded-2xl shadow-lg p-6 text-left space-y-4">
-                <!-- Gambar -->
+
+            {{-- CARD MENU 3 --}}
+            <div
+                class="bg-[#FCE9D1] rounded-2xl shadow-lg p-6 text-left space-y-4 transform transition-all duration-500 hover:-translate-y-3 hover:scale-105 hover:shadow-[0_0_25px_rgba(255,157,35,0.4)]">
                 <div
-                    class="w-52 h-52 rounded-full flex flex-col items-center mx-auto justify-center overflow-hidden shadow-md -mt-20 border-4 border-[#FCE9D1]">
-                    <img src="images/bakwan.svg" alt="Bakwan"
-                        class="w-full bg-white p-7 rounded-4xl h-full object-cover">
+                    class="w-52 h-52 rounded-full flex flex-col items-center mx-auto justify-center overflow-hidden shadow-md -mt-20 border-4 border-[#FCE9D1] transition-transform duration-500 hover:scale-110">
+                    <img src="images/molen.svg" alt="molen"
+                        class="roll w-full bg-white p-7 rounded-4xl h-[400px] object-cover transition-transform duration-500 hover:scale-110">
                 </div>
-
-                <!-- Nama Makanan -->
-                <h2 class="text-2xl font-extrabold text-[#A94E04] drop-shadow-[1px_1px_1px_#fff]">Bakwan</h2>
-
-                <!-- Deskripsi -->
+                <h2
+                    class="text-2xl font-extrabold text-[#A94E04] drop-shadow-[1px_1px_1px_#fff] transition-colors duration-300 hover:text-[#FF9D23]">
+                    molen
+                </h2>
                 <p class="text-[#7A3B0C] text-sm leading-relaxed">
-                    Bakwan gurih dengan kombinasi sayuran segar dan adonan renyah, memberikan sensasi rasa yang lezat
-                    dan
-                    cocok untuk teman makan.
+                    molen manis dengan adonan renyah keemasan, cocok disantap hangat dengan teh atau kopi.
                 </p>
-
-                <!-- Harga -->
-                <p class="font-semibold text-[#7A3B0C]">Harga: Rp. 2000,00</p>
-
-                <!-- Tombol -->
-                <button
-                    class="bg-[#FF9D23] hover:bg-[#ffb648] text-white w-full font-bold py-2 px-6 rounded-lg shadow-md transition duration-300">
+                <p class="font-semibold text-[#7A3B0C]">Harga: Rp. 3000,00</p>
+                <a href="https://wa.me/6285158329255?text=Halo%20saya%20ingin%20tanya%20mengenai%20pemesanan%20Cakwe%20dan%20Roti%20Goreng%20Bantal%20Jaya%20Pak%20Ali%2C%20apa%20bisa%3F"
+                    target="_blank"
+                    class="block bg-gradient-to-r from-[#FF9D23] to-[#FFB648] hover:from-[#ffa737] hover:to-[#ffc76d] text-white font-bold py-2 px-6 rounded-lg shadow-md transition-all duration-300 text-center hover:scale-105 hover:shadow-lg hover:-translate-y-1 active:scale-95">
                     Pesan Sekarang
-                </button>
+                </a>
             </div>
-            {{-- card menu 4 --}}
-            <div class="max-w-md bg-[#FCE9D1] rounded-2xl shadow-lg p-6 text-left space-y-4">
-                <!-- Gambar -->
+
+            {{-- CARD MENU 4 --}}
+            <div
+                class="bg-[#FCE9D1] rounded-2xl shadow-lg p-6 text-left space-y-4 transform transition-all duration-500 hover:-translate-y-3 hover:scale-105 hover:shadow-[0_0_25px_rgba(255,157,35,0.4)]">
                 <div
-                    class="w-52 h-52 rounded-full flex flex-col items-center mx-auto justify-center overflow-hidden shadow-md -mt-20 border-4 border-[#FCE9D1]">
-                    <img src="images/bakwan.svg" alt="Bakwan"
-                        class="w-full bg-white p-7 rounded-4xl h-full object-cover">
+                    class="w-52 h-52 rounded-full flex flex-col items-center mx-auto justify-center overflow-hidden shadow-md -mt-20 border-4 border-[#FCE9D1] transition-transform duration-500 hover:scale-110">
+                    <img src="images/roti-goreng-aja.svg" alt="Roti Goreng"
+                        class="roll w-full bg-white p-7 rounded-4xl h-[400px] object-cover transition-transform duration-500 hover:scale-110">
                 </div>
-
-                <!-- Nama Makanan -->
-                <h2 class="text-2xl font-extrabold text-[#A94E04] drop-shadow-[1px_1px_1px_#fff]">Bakwan</h2>
-
-                <!-- Deskripsi -->
+                <h2
+                    class="text-2xl font-extrabold text-[#A94E04] drop-shadow-[1px_1px_1px_#fff] transition-colors duration-300 hover:text-[#FF9D23]">
+                    Roti Goreng
+                </h2>
                 <p class="text-[#7A3B0C] text-sm leading-relaxed">
-                    Bakwan gurih dengan kombinasi sayuran segar dan adonan renyah, memberikan sensasi rasa yang lezat
-                    dan
-                    cocok untuk teman makan.
+                    Roti goreng empuk dengan isian manis legit yang lumer di mulut, cocok untuk sarapan atau camilan.
                 </p>
-
-                <!-- Harga -->
-                <p class="font-semibold text-[#7A3B0C]">Harga: Rp. 2000,00</p>
-
-                <!-- Tombol -->
-                <button
-                    class="bg-[#FF9D23] hover:bg-[#ffb648] text-white w-full font-bold py-2 px-6 rounded-lg shadow-md transition duration-300">
+                <p class="font-semibold text-[#7A3B0C]">Harga: Rp. 3500,00</p>
+                <a href="https://wa.me/6285158329255?text=Halo%20saya%20ingin%20tanya%20mengenai%20pemesanan%20Cakwe%20dan%20Roti%20Goreng%20Bantal%20Jaya%20Pak%20Ali%2C%20apa%20bisa%3F"
+                    target="_blank"
+                    class="block bg-gradient-to-r from-[#FF9D23] to-[#FFB648] hover:from-[#ffa737] hover:to-[#ffc76d] text-white font-bold py-2 px-6 rounded-lg shadow-md transition-all duration-300 text-center hover:scale-105 hover:shadow-lg hover:-translate-y-1 active:scale-95">
                     Pesan Sekarang
-                </button>
+                </a>
             </div>
         </div>
-        <div class="relative ">
-            <img src="images/element-kiri.svg" class="absolute left-0 -top-20 w-72  object-cover rounded-lg" />
+
+        <div class="relative">
+            <img src="images/element-kiri.svg"
+                class="absolute left-0 -top-20 w-72 object-cover rounded-lg animate-float" />
         </div>
+
 
 
         {{-- lokasi --}}
         <section class="relative mt-96">
             <!-- BAGIAN ATAS -->
             <img id="lokasi" src="images/roti-goreng-aja.svg" alt="Roti Goreng"
-                class="absolute -top-56 left-1/2 -translate-x-1/2 w-96 h-96 opacity-90">
+                class="absolute -top-56 left-1/2 -translate-x-1/2 w-96 h-96 opacity-90 roll">
             <div class="relative h-40 bg-[#ff9c2378] -skew-y-10 flex items-center justify-center">
                 <span class="relative text-white pb-10 font-extrabold text-5xl tracking-wider uppercase">Lokasi</span>
             </div>
             <div class="relative ">
                 <img src="images/element-kanan.svg"
-                    class="absolute z-11 right-0 -bottom-10 w-80  object-cover rounded-lg" />
+                    class="animate-float absolute z-11 right-0 -bottom-10 w-80  object-cover rounded-lg" />
             </div>
             <!-- BAGIAN BAWAH -->
             <div class="relative bg-[#f5eee7] -mt-10 -skew-y-10 pt-44 pb-96">
@@ -350,17 +346,20 @@
                 <!-- Konten utama -->
                 <div class="relative flex flex-col items-center justify-center text-center text-white py-24 md:py-44">
                     <!-- QR Code -->
+                    <h3 class="text-white text-3xl font-bold">Scan Disini</h3>
+                    <p class="text-4xl font-bold mb-3">⭣</p>
                     <div class="bg-[#FF9D23] p-7 rounded-2xl shadow-lg">
                         <img src="images/nomor.svg" alt="QR Code" class="w-64 h-64 object-cover rounded-lg">
                     </div>
 
                     <!-- Tombol WhatsApp -->
                     <a href="https://wa.me/6285158329255?text=Halo%20saya%20ingin%20tanya%20mengenai%20pemesanan%20Cakwe%20dan%20Roti%20Goreng%20Bantal%20Jaya%20Pak%20Ali%2C%20apa%20bisa%3F"
-                        class="mt-5 inline-flex items-center gap-x-2 bg-white text-orange-700 font-semibold px-20 py-3 rounded-full shadow-md hover:bg-orange-50 transition"
+                        class="mt-5 inline-flex items-center gap-x-2 bg-white text-orange-700 font-semibold px-20 py-3 rounded-full shadow-md hover:bg-orange-50 transition animate-pulse-slow"
                         target="_blank">
                         <i class="fa-brands fa-whatsapp text-green-500 text-4xl"></i>
                         <p class="text-xl">Pesan Sekarang!</p>
                     </a>
+
 
 
                 </div>
@@ -376,6 +375,7 @@
     @endif
 
     <script>
+        // Navbar Scroll Effect
         window.addEventListener("scroll", function() {
             const navbar = document.getElementById("navbar");
             if (window.scrollY > 10) {
@@ -385,6 +385,18 @@
                 navbar.classList.add("bg-transparent");
                 navbar.classList.remove("bg-[#ff8c00]", "shadow-md", "backdrop-blur-md");
             }
+        });
+
+        // Toggle mobile menu
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        let open = false;
+        menuBtn.addEventListener('click', () => {
+            open = !open;
+            mobileMenu.classList.toggle('hidden');
+            menuBtn.innerHTML = open ?
+                '<i class="fa-solid fa-xmark text-2xl"></i>' :
+                '<i class="fa-solid fa-bars text-2xl"></i>';
         });
 
         // Carousel Script
@@ -443,6 +455,7 @@
 
         document.getElementById('nextBtn').addEventListener('click', nextSlide);
         document.getElementById('prevBtn').addEventListener('click', prevSlide);
+
 
         updateCarousel();
     </script>

@@ -20,6 +20,7 @@ body {
     @apply bg-white text-gray-900;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 .container {
@@ -44,7 +45,7 @@ html {
 
 
 .roll {
-    animation: roll 5s linear infinite;
+    animation: roll 7s linear infinite;
     transform: scale(1.1);
 }
 
@@ -86,3 +87,42 @@ html {
     pointer-events: none;
     z-index: 0;
 }
+
+/* animasi elemen odading */
+@keyframes float {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(5px, -10px);
+    }
+
+    50% {
+        transform: translate(0, -20px);
+    }
+
+    75% {
+        transform: translate(-5px, -10px);
+    }
+}
+
+.animate-float {
+    animation: float 1.8s ease-in-out infinite;
+}
+
+/* animasi denyut */
+@keyframes pulse-slow {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 1s ease-in-out infinite;
+}
+
+
