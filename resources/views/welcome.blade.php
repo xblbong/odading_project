@@ -16,10 +16,10 @@
     @include('components.layouts.header')
 
     <!-- SECTION HERO -->
-    <section id="home" class="reveal relative min-h-screen pt-32 flex items-center justify-between overflow-hidden">
+    <section id="home" class="relative min-h-screen pt-32 flex items-center justify-between overflow-hidden">
         <!-- Background image + overlay -->
         <img src="images/banner.svg" class="absolute inset-0 bg-cover w-full" />
-        <div class="absolute inset-0 bg-[#B64F0B]/70"></div>
+        <div class="absolute inset-0 bg-[#B64F0B]/55"></div>
 
         <!-- Konten kiri -->
         <div class="relative -top-42 left-24 z-10 w-1/2 px-16 text-white">
@@ -30,11 +30,20 @@
                 Jaya Pak Ali!
             </h1>
 
-            <button
-                class="text-xl bg-[#ff8c00] text-white font-semibold px-7 py-3 rounded-full shadow-2xl hover:scale-105 hover:bg-white hover:text-orange-400 transition"
-                style="box-shadow: 5px 2px 10px #934a22;">
-                Pesan Sekarang →
-            </button>
+
+            <div class="flex gap-x-5">
+                <button
+                    class="text-xl bg-[#ff8c00] text-white font-semibold px-7 py-3 rounded-full shadow-2xl hover:scale-105 hover:bg-white hover:text-orange-400 transition"
+                    style="box-shadow: 5px 2px 10px #934a22;" onclick="window.location.href='/order'">
+                    Pesan Sekarang →
+                </button>
+                <button
+                    class="text-xl bg-white text-[#ff8c00] font-semibold px-7 py-3 rounded-full shadow-2xl hover:scale-105 hover:bg-orange-400 hover:text-white transition"
+                    style="box-shadow: 5px 2px 10px #934a22;"
+                    onclick="window.location.href='https://wa.me/6285158329255?text=Halo%20saya%20ingin%20tanya%20mengenai%20pemesanan%20Cakwe%20dan%20Roti%20Goreng%20Bantal%20Jaya%20Pak%20Ali%2C%20apa%20bisa%3F'">
+                    Tanya Pak Ali ?
+                </button>
+            </div>
 
         </div>
         <!-- Deretan gambar menu -->
@@ -44,8 +53,7 @@
                 <img src="images/bala-bala.svg" class="w-56 h-5w-56 rounded-full object-cover roll" />
             </div>
             <div class="reveal relative">
-                <img src="https://lh3.googleusercontent.com/gps-cs-s/AG0ilSxV-jM9bPDEb-99FS52kdqqzixoyaOvopRvN4CQe33IfLPCZY0cXSITjIu9EMRzcTs84kqC_aNzR_wTiAF4kCvAYaXYY0314a2E5DkvWZiLSC-_zTHbTdsbIRmL7BljZiBkdu-bWQ=s1360-w1360-h1020-rw"
-                    class="w-44 h-44 rounded-full object-cover hover-roll" />
+                <img src="images/roti-goreng-aja.svg" class="w-44 h-44 rounded-full object-cover hover-roll" />
             </div>
             <div class="reveal relative">
                 <img src="images/molen.svg" class="w-44 h-44 rounded-full object-cover hover-roll" />
@@ -61,12 +69,10 @@
         </div>
 
         <!-- Gradasi bawah -->
-        <div class="absolute bottom-0 left-0 w-full h-44 fade-bottom"></div>
+        <div class="absolute bottom-0 left-0 w-full h-48 bg-gradient-to-t from-orange-200 via-white/40 to-transparent z-20">
+        </div>
     </section>
 
-    <div class="bottom-0 left-0 mb-32">
-        <div class="absolute top-0 left-0 w-full h-32 fade-top z-0"></div>
-    </div>
 
     {{-- about section --}}
     <section id="tentang-kami" class="reveal">
@@ -84,28 +90,28 @@
                 <div class="relative w-full h-full">
                     <div
                         class="slide absolute inset-0 flex flex-col items-center justify-center transition-all duration-700 ease-in-out">
-                        <img src="https://lh3.googleusercontent.com/gps-cs-s/AG0ilSxV-jM9bPDEb-99FS52kdqqzixoyaOvopRvN4CQe33IfLPCZY0cXSITjIu9EMRzcTs84kqC_aNzR_wTiAF4kCvAYaXYY0314a2E5DkvWZiLSC-_zTHbTdsbIRmL7BljZiBkdu-bWQ=s1360-w1360-h1020-rw"
+                        <img src="images/sliders/gerobak1.webp"
                             class="w-[500px] h-[700px] object-cover rounded-xl shadow-xl transition-all duration-700" />
                         <p class="text-white font-semibold mt-2">John Wick: Chapter 4</p>
                     </div>
 
                     <div
                         class="slide absolute inset-0 flex flex-col items-center justify-center transition-all duration-700 ease-in-out">
-                        <img src="https://lh3.googleusercontent.com/gps-cs-s/AG0ilSzFdiwHsTVRlg_aVVP3W7YOs8_6hoi7oR01Y3MDmwDoLZWgW_GrrywvHYP20j3U8_pNNaFf2J6bx3XJxXLf19hQhvcp6MBY-2OqvjQptTJH2x7r-GfUPfb4lA6oSnhIE2N1jaKq=s1360-w1360-h1020-rw"
+                        <img src="images/sliders/gerobak2.webp"
                             class="w-[300px] h-[500px] object-cover rounded-xl shadow-xl transition-all duration-700" />
                         <p class="text-white font-semibold mt-2">Oppenheimer</p>
                     </div>
 
                     <div
                         class="slide absolute inset-0 flex flex-col items-center justify-center transition-all duration-700 ease-in-out">
-                        <img src="https://lh3.googleusercontent.com/gps-cs-s/AG0ilSz1kP-pHFtTI5hVFxm3SP658_dynz2kviG2G-SyT1PlnSL3n5JLhOp4OKUjPUENs6QOs31cs7Wbid7N18GzF5EhW2vT9C-ziAwfxXwEK8ugZbOjeGYYZa-7pWAFcwl8AzEwW4GD=s1360-w1360-h1020-rw"
+                        <img src="images/sliders/gerobak3.webp"
                             class="w-[300px] h-[500px] object-cover rounded-xl shadow-xl transition-all duration-700" />
                         <p class="text-white font-semibold mt-2">Avatar: The Way of Water</p>
                     </div>
 
                     <div
                         class="slide absolute inset-0 flex flex-col items-center justify-center transition-all duration-700 ease-in-out">
-                        <img src="https://lh3.googleusercontent.com/gps-cs-s/AG0ilSyeYDHoxrV3h5kcfXZvtTYILS4wn7CZZ4bF9BCB5BLaTcce7FgQXz4bwmYkgVrBgf-cNf5ZZXwiTFQVfmhet3YYu7b0cTSnXk8AU3Ogv7UO-7FqbPgz7NSQ9_QmFj2Uvf8DalYEkw=s1360-w1360-h1020-rw"
+                        <img src="images/sliders/gerobak4.webp"
                             class="w-[300px] h-[500px] object-cover rounded-xl shadow-xl transition-all duration-700" />
                         <p class="text-white font-semibold mt-2">Dune: Part Two</p>
                     </div>
@@ -122,9 +128,9 @@
                 </button>
             </div>
             <div>
-                <h3 class="font-bold text-4xl text-[#ff5e00] capitalize mb-3"
+                <h3 class="font-bold text-5xl text-[#ff5e00] capitalize mb-8"
                     style="text-shadow: 2px 2px 10px #ffbf7fbb;">Roti Goreng & Cakwe Jaya Pak Ali!</h3>
-                <p class="font-normal text-lg text-[#454545] capitalize">Sebuah usaha kuliner yang menyajikan berbagai
+                <p class="font-normal text-xl text-[#eaeaea] capitalize" style="text-shadow: 2px 2px 10px #4b4b4b">Sebuah usaha kuliner yang menyajikan berbagai
                     makanan ringan tradisional yang menggugah selera.
                     Kami berkomitmen untuk memberikan pengalaman rasa yang otentik dan berkualitas, melalui proses
                     pembuatan yang penuh dengan keahlian dan bahan-bahan terbaik.</p>
@@ -159,7 +165,7 @@
                 <div
                     class="w-52 h-52 rounded-full flex flex-col items-center mx-auto justify-center overflow-hidden shadow-md -mt-20 border-4 border-[#FCE9D1] transition-transform duration-500 hover:scale-110">
                     <img src="images/bakwan.svg" alt="Bakwan"
-                        class="roll w-full bg-white p-7 rounded-4xl h-full object-cover transition-transform duration-500 hover:scale-110">
+                        class="w-full bg-white p-7 rounded-4xl h-full object-cover transition-transform duration-500 hover:scale-110">
                 </div>
 
                 <!-- Nama Makanan -->
@@ -192,7 +198,7 @@
                 <div
                     class="w-52 h-52 rounded-full flex flex-col items-center mx-auto justify-center overflow-hidden shadow-md -mt-20 border-4 border-[#FCE9D1] transition-transform duration-500 hover:scale-110">
                     <img src="images/cakue.svg" alt="Cakue"
-                        class="roll w-full bg-white p-7 rounded-4xl h-[400px] object-cover transition-transform duration-500 hover:scale-110">
+                        class="w-full bg-white p-7 rounded-4xl h-[400px] object-cover transition-transform duration-500 hover:scale-110 rotate-90">
                 </div>
                 <h2
                     class="text-2xl font-extrabold text-[#A94E04] drop-shadow-[1px_1px_1px_#fff] transition-colors duration-300 hover:text-[#FF9D23]">
@@ -216,7 +222,7 @@
                 <div
                     class="w-52 h-52 rounded-full flex flex-col items-center mx-auto justify-center overflow-hidden shadow-md -mt-20 border-4 border-[#FCE9D1] transition-transform duration-500 hover:scale-110">
                     <img src="images/molen.svg" alt="molen"
-                        class="roll w-full bg-white p-7 rounded-4xl h-[400px] object-cover transition-transform duration-500 hover:scale-110">
+                        class="w-full bg-white p-7 rounded-4xl h-[400px] object-cover transition-transform duration-500 hover:scale-110">
                 </div>
                 <h2
                     class="text-2xl font-extrabold text-[#A94E04] drop-shadow-[1px_1px_1px_#fff] transition-colors duration-300 hover:text-[#FF9D23]">
@@ -239,7 +245,7 @@
                 <div
                     class="w-52 h-52 rounded-full flex flex-col items-center mx-auto justify-center overflow-hidden shadow-md -mt-20 border-4 border-[#FCE9D1] transition-transform duration-500 hover:scale-110">
                     <img src="images/roti-goreng-aja.svg" alt="Roti Goreng"
-                        class="roll w-full bg-white p-7 rounded-4xl h-[400px] object-cover transition-transform duration-500 hover:scale-110">
+                        class="w-full bg-white p-7 rounded-4xl h-[400px] object-cover transition-transform duration-500 hover:scale-110">
                 </div>
                 <h2
                     class="text-2xl font-extrabold text-[#A94E04] drop-shadow-[1px_1px_1px_#fff] transition-colors duration-300 hover:text-[#FF9D23]">
@@ -268,7 +274,7 @@
         <section class="relative mt-96 reveal">
             <!-- BAGIAN ATAS -->
             <img id="lokasi" src="images/roti-goreng-aja.svg" alt="Roti Goreng"
-                class="absolute -top-56 left-1/2 -translate-x-1/2 w-96 h-96 opacity-90 roll">
+                class="absolute -top-56 left-1/2 -translate-x-1/2 w-96 h-96 opacity-90 animate-float">
             <div class="relative h-40 bg-[#ff9c2378] -skew-y-10 flex items-center justify-center">
                 <span class="relative text-white pb-10 font-extrabold text-5xl tracking-wider uppercase">Lokasi</span>
             </div>
@@ -371,7 +377,7 @@
     @include('components.layouts.footer')
 
     @if (Route::has('login'))
-        <div class="h-14.5 hidden lg:block"></div>
+        <div class=" hidden lg:block"></div>
     @endif
 
     <script>
