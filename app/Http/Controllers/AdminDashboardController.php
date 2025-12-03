@@ -25,7 +25,7 @@ class AdminDashboardController extends Controller
             ->count();
 
         // List Order Terbaru (Pending di atas)
-        $orders = Order::with('items.product')->latest()->paginate(10);
+        $orders = Order::with('items.menu')->latest()->paginate(10);
 
         return view('admin.dashboard', compact('incomeThisMonth', 'ordersCountMonth', 'orders'));
     }

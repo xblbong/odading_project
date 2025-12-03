@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Admin\MenuController;
+use App\Http\Controllers\Admin\TransactionController;
 use App\Http\Controllers\AdminDashboardController;
 use App\Http\Controllers\AdminProductController;
 use App\Http\Controllers\PublicOrderController;
@@ -9,10 +11,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/transaksi', function () {
+    return view('admin.transaksi.index');
+});
+
 Route::get('/login', function () {
     return view('admin.auth.login');
 })->name('login')->middleware('guest'); 
-    
+
 
 // Form Order
 Route::get('/order', [PublicOrderController::class, 'index'])->name('order.index');
@@ -25,4 +31,11 @@ Route::prefix('admin')->group(function () {
 
     // Resource untuk Produk (CRUD)
     Route::resource('products', AdminProductController::class);
+
+     // Route Resource otomatis membuat (index, store, update, destroy)
+    Route::resource('/menu', MenuController::class)->except(['create', 'edit', 'show']);
+
+    // ROUTE BARU: TRANSAKSI
+    Route::get('/transaksi', [TransactionController::class, 'index'])->name('transaksi.index');
+    Route::post('/transaksi/{id}/confirm', [TransactionController::class, 'confirmPayment'])->name('transaksi.confirm');
 });

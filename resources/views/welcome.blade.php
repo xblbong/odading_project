@@ -30,7 +30,6 @@
                 Jaya Pak Ali!
             </h1>
 
-
             <div class="flex gap-x-5">
                 <button
                     class="text-xl bg-[#ff8c00] text-white font-semibold px-7 py-3 rounded-full shadow-2xl hover:scale-105 hover:bg-white hover:text-orange-400 transition"
@@ -44,6 +43,7 @@
                     Tanya Pak Ali ?
                 </button>
             </div>
+
 
         </div>
         <!-- Deretan gambar menu -->

@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('order_items', function (Blueprint $table) {
             $table->id();
             $table->foreignId('order_id')->constrained()->onDelete('cascade');
-            $table->foreignId('product_id')->constrained();
+            $table->foreignId('menu_id')->constrained('menus')->onDelete('cascade');
             $table->string('nama_produk_snapshot'); // Simpan nama saat beli (jaga2 klo menu dihapus)
             $table->integer('harga_snapshot'); // Simpan harga saat beli
             $table->integer('jumlah');

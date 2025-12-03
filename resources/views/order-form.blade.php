@@ -81,6 +81,26 @@
         </div>
 
         <div class="p-8">
+            <!-- Cek Error Session -->
+            @if (session('error'))
+                <div
+                    style="background-color: #fee2e2; color: #b91c1c; padding: 1rem; margin-bottom: 1rem; border-radius: 0.5rem; border: 1px solid #fca5a5;">
+                    <strong>Terjadi Kesalahan!</strong><br>
+                    {{ session('error') }}
+                </div>
+            @endif
+
+            <!-- Cek Error Validasi -->
+            @if ($errors->any())
+                <div
+                    style="background-color: #fee2e2; color: #b91c1c; padding: 1rem; margin-bottom: 1rem; border-radius: 0.5rem;">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>- {{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
             <form action="{{ route('order.store') }}" method="POST" id="orderForm">
                 @csrf
 

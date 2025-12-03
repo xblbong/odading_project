@@ -12,14 +12,7 @@
      {{-- Font Awesome --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-     {{-- Google Fonts (Optional: Inter/Poppins) --}}
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
     <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-        }
-
         /* Custom Scrollbar */
         ::-webkit-scrollbar {
             width: 6px;
@@ -68,21 +61,21 @@
         <nav class="flex-1 py-6 space-y-1 overflow-y-auto">
              {{-- Menu Pemesanan (Aktif) --}}
             <a href="{{ route('admin.dashboard') }}"
-                class="sidebar-active flex items-center gap-3 px-6 py-3 font-medium transition-colors hover:bg-orange-50 hover:text-[#ff8c00]">
+                class="{{ request()-> routeIs(patterns: 'admin.dashboard') ? 'sidebar-active' : 'text-gray-500' }} flex items-center gap-3 px-6 py-3 font-medium transition-colors hover:bg-orange-50 hover:text-[#ff8c00]">
                 <i class="fa-solid fa-clipboard-list w-6 text-center"></i>
                 Dashboard
             </a>
 
              {{-- Menu Daftar Menu (Placeholder Link) --}}
-            <a href="{{ route('admin.dashboard') }}"
-                class="text-gray-500 flex items-center gap-3 px-6 py-3 font-medium transition-colors hover:bg-orange-50 hover:text-[#ff8c00]">
+            <a href="{{ route('menu.index') }}"
+                class="{{ request()->routeIs('menu.index') ? 'sidebar-active' : 'text-gray-500'}} flex items-center gap-3 px-6 py-3 font-medium transition-colors hover:bg-orange-50 hover:text-[#ff8c00]">
                 <i class="fa-solid fa-book-open w-6 text-center"></i>
                 Daftar Menu
             </a>
 
              {{-- Menu Transaksi (Placeholder Link) --}}
-            <a href="#"
-                class="text-gray-500 flex items-center gap-3 px-6 py-3 font-medium transition-colors hover:bg-orange-50 hover:text-[#ff8c00]">
+            <a href="{{ route(name: 'transaksi.index') }}"
+                class="{{ request() -> routeIs('transaksi.index') ? 'sidebar-active' : 'text-gray-500' }} flex items-center gap-3 px-6 py-3 font-medium transition-colors hover:bg-orange-50 hover:text-[#ff8c00]">
                 <i class="fa-solid fa-file-invoice-dollar w-6 text-center"></i>
                 Transaksi
             </a>
