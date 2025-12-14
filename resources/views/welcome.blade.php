@@ -69,7 +69,8 @@
         </div>
 
         <!-- Gradasi bawah -->
-        <div class="absolute bottom-0 left-0 w-full h-48 bg-gradient-to-t from-orange-200 via-white/40 to-transparent z-20">
+        <div
+            class="absolute bottom-0 left-0 w-full h-48 bg-gradient-to-t from-orange-200 via-white/40 to-transparent z-20">
         </div>
     </section>
 
@@ -130,7 +131,8 @@
             <div>
                 <h3 class="font-bold text-5xl text-[#ff5e00] capitalize mb-8"
                     style="text-shadow: 2px 2px 10px #ffbf7fbb;">Roti Goreng & Cakwe Jaya Pak Ali!</h3>
-                <p class="font-normal text-xl text-[#eaeaea] capitalize" style="text-shadow: 2px 2px 10px #4b4b4b">Sebuah usaha kuliner yang menyajikan berbagai
+                <p class="font-normal text-xl text-[#eaeaea] capitalize" style="text-shadow: 2px 2px 10px #4b4b4b">
+                    Sebuah usaha kuliner yang menyajikan berbagai
                     makanan ringan tradisional yang menggugah selera.
                     Kami berkomitmen untuk memberikan pengalaman rasa yang otentik dan berkualitas, melalui proses
                     pembuatan yang penuh dengan keahlian dan bahan-bahan terbaik.</p>
@@ -158,109 +160,56 @@
         {{-- CARD MENU RESPONSIF & INTERAKTIF --}}
         <div
             class="reveal container mx-auto px-6 py-20 my-32 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-10 gap-y-24">
-            {{-- CARD MENU 1 --}}
-            <div
-                class="bg-[#FCE9D1] rounded-2xl shadow-lg p-6 text-left space-y-4 transform transition-all duration-500 hover:-translate-y-3 hover:scale-105 hover:shadow-[0_0_25px_rgba(255,157,35,0.4)]">
-                <!-- Gambar -->
+
+            {{-- Mulai Loop Menu Dinamis --}}
+            @forelse($menus as $menu)
                 <div
-                    class="w-52 h-52 rounded-full flex flex-col items-center mx-auto justify-center overflow-hidden shadow-md -mt-20 border-4 border-[#FCE9D1] transition-transform duration-500 hover:scale-110">
-                    <img src="images/bakwan.svg" alt="Bakwan"
-                        class="w-full bg-white p-7 rounded-4xl h-full object-cover transition-transform duration-500 hover:scale-110">
+                    class="bg-[#FCE9D1] rounded-2xl shadow-lg p-6 text-left space-y-4 transform transition-all duration-500 hover:-translate-y-3 hover:scale-105 hover:shadow-[0_0_25px_rgba(255,157,35,0.4)] flex flex-col h-full">
+
+                    <!-- Gambar -->
+                    <div
+                        class="w-52 h-52 rounded-full flex flex-col items-center mx-auto justify-center overflow-hidden shadow-md -mt-20 border-4 border-[#FCE9D1] transition-transform duration-500 hover:scale-110 shrink-0 bg-white">
+                        @if ($menu->foto)
+                            <!-- Gambar dari Database (Upload Admin) -->
+                            <img src="{{ asset('storage/' . $menu->foto) }}" alt="{{ $menu->nama_menu }}"
+                                class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        @else
+                            <!-- Gambar Default jika tidak ada foto -->
+                            <div class="flex items-center justify-center h-full text-gray-300">
+                                <i class="fa-solid fa-utensils text-4xl"></i>
+                            </div>
+                        @endif
+                    </div>
+
+                    <!-- Nama Makanan -->
+                    <h2 class="text-2xl font-extrabold text-[#A94E04] drop-shadow-[1px_1px_1px_#fff] transition-colors duration-300 hover:text-[#FF9D23] line-clamp-1"
+                        title="{{ $menu->nama_menu }}">
+                        {{ $menu->nama_menu }}
+                    </h2>
+
+                    <!-- Deskripsi -->
+                    <p class="text-[#7A3B0C] text-sm leading-relaxed flex-grow line-clamp-3">
+                        {{ $menu->deskripsi ?? 'Nikmati kelezatan menu spesial dari Pak Ali yang dibuat dengan bahan pilihan.' }}
+                    </p>
+
+                    <!-- Harga -->
+                    <p class="font-semibold text-[#7A3B0C] text-lg">
+                        Rp {{ number_format($menu->harga, 0, ',', '.') }}
+                    </p>
+
+                    <!-- Tombol -->
+                    <a href="{{ route('order.index') }}"
+                        class="mt-auto block bg-gradient-to-r from-[#FF9D23] to-[#FFB648] hover:from-[#ffa737] hover:to-[#ffc76d] text-white font-bold py-2 px-6 rounded-lg shadow-md transition-all duration-300 text-center hover:scale-105 hover:shadow-lg hover:-translate-y-1 active:scale-95">
+                        Pesan Sekarang
+                    </a>
                 </div>
-
-                <!-- Nama Makanan -->
-                <h2
-                    class="text-2xl font-extrabold text-[#A94E04] drop-shadow-[1px_1px_1px_#fff] transition-colors duration-300 hover:text-[#FF9D23]">
-                    Bakwan
-                </h2>
-
-                <!-- Deskripsi -->
-                <p class="text-[#7A3B0C] text-sm leading-relaxed">
-                    Bakwan gurih dengan kombinasi sayuran segar dan adonan renyah, memberikan sensasi rasa yang lezat
-                    dan cocok
-                    untuk teman makan.
-                </p>
-
-                <!-- Harga -->
-                <p class="font-semibold text-[#7A3B0C]">Harga: Rp. 2000,00</p>
-
-                <!-- Tombol -->
-                <a href="https://wa.me/6285158329255?text=Halo%20saya%20ingin%20tanya%20mengenai%20pemesanan%20Cakwe%20dan%20Roti%20Goreng%20Bantal%20Jaya%20Pak%20Ali%2C%20apa%20bisa%3F"
-                    target="_blank"
-                    class="block bg-gradient-to-r from-[#FF9D23] to-[#FFB648] hover:from-[#ffa737] hover:to-[#ffc76d] text-white font-bold py-2 px-6 rounded-lg shadow-md transition-all duration-300 text-center hover:scale-105 hover:shadow-lg hover:-translate-y-1 active:scale-95">
-                    Pesan Sekarang
-                </a>
-            </div>
-
-            {{-- CARD MENU 2 --}}
-            <div
-                class="bg-[#FCE9D1] rounded-2xl shadow-lg p-6 text-left space-y-4 transform transition-all duration-500 hover:-translate-y-3 hover:scale-105 hover:shadow-[0_0_25px_rgba(255,157,35,0.4)]">
-                <div
-                    class="w-52 h-52 rounded-full flex flex-col items-center mx-auto justify-center overflow-hidden shadow-md -mt-20 border-4 border-[#FCE9D1] transition-transform duration-500 hover:scale-110">
-                    <img src="images/cakue.svg" alt="Cakue"
-                        class="w-full bg-white p-7 rounded-4xl h-[400px] object-cover transition-transform duration-500 hover:scale-110 rotate-90">
+            @empty
+                {{-- Tampilan jika Menu Kosong --}}
+                <div class="col-span-full text-center py-10">
+                    <p class="text-[#A94E04] text-xl font-bold">Belum ada menu yang tersedia saat ini.</p>
                 </div>
-                <h2
-                    class="text-2xl font-extrabold text-[#A94E04] drop-shadow-[1px_1px_1px_#fff] transition-colors duration-300 hover:text-[#FF9D23]">
-                    Cakue
-                </h2>
-                <p class="text-[#7A3B0C] text-sm leading-relaxed">
-                    Cakue dengan isian sayur segar dan sambal pedas khas yang menggugah selera, cocok untuk camilan
-                    sore hari.
-                </p>
-                <p class="font-semibold text-[#7A3B0C]">Harga: Rp. 2500,00</p>
-                <a href="https://wa.me/6285158329255?text=Halo%20saya%20ingin%20tanya%20mengenai%20pemesanan%20Cakwe%20dan%20Roti%20Goreng%20Bantal%20Jaya%20Pak%20Ali%2C%20apa%20bisa%3F"
-                    target="_blank"
-                    class="block bg-gradient-to-r from-[#FF9D23] to-[#FFB648] hover:from-[#ffa737] hover:to-[#ffc76d] text-white font-bold py-2 px-6 rounded-lg shadow-md transition-all duration-300 text-center hover:scale-105 hover:shadow-lg hover:-translate-y-1 active:scale-95">
-                    Pesan Sekarang
-                </a>
-            </div>
+            @endforelse
 
-            {{-- CARD MENU 3 --}}
-            <div
-                class="bg-[#FCE9D1] rounded-2xl shadow-lg p-6 text-left space-y-4 transform transition-all duration-500 hover:-translate-y-3 hover:scale-105 hover:shadow-[0_0_25px_rgba(255,157,35,0.4)]">
-                <div
-                    class="w-52 h-52 rounded-full flex flex-col items-center mx-auto justify-center overflow-hidden shadow-md -mt-20 border-4 border-[#FCE9D1] transition-transform duration-500 hover:scale-110">
-                    <img src="images/molen.svg" alt="molen"
-                        class="w-full bg-white p-7 rounded-4xl h-[400px] object-cover transition-transform duration-500 hover:scale-110">
-                </div>
-                <h2
-                    class="text-2xl font-extrabold text-[#A94E04] drop-shadow-[1px_1px_1px_#fff] transition-colors duration-300 hover:text-[#FF9D23]">
-                    molen
-                </h2>
-                <p class="text-[#7A3B0C] text-sm leading-relaxed">
-                    molen manis dengan adonan renyah keemasan, cocok disantap hangat dengan teh atau kopi.
-                </p>
-                <p class="font-semibold text-[#7A3B0C]">Harga: Rp. 3000,00</p>
-                <a href="https://wa.me/6285158329255?text=Halo%20saya%20ingin%20tanya%20mengenai%20pemesanan%20Cakwe%20dan%20Roti%20Goreng%20Bantal%20Jaya%20Pak%20Ali%2C%20apa%20bisa%3F"
-                    target="_blank"
-                    class="block bg-gradient-to-r from-[#FF9D23] to-[#FFB648] hover:from-[#ffa737] hover:to-[#ffc76d] text-white font-bold py-2 px-6 rounded-lg shadow-md transition-all duration-300 text-center hover:scale-105 hover:shadow-lg hover:-translate-y-1 active:scale-95">
-                    Pesan Sekarang
-                </a>
-            </div>
-
-            {{-- CARD MENU 4 --}}
-            <div
-                class="bg-[#FCE9D1] rounded-2xl shadow-lg p-6 text-left space-y-4 transform transition-all duration-500 hover:-translate-y-3 hover:scale-105 hover:shadow-[0_0_25px_rgba(255,157,35,0.4)]">
-                <div
-                    class="w-52 h-52 rounded-full flex flex-col items-center mx-auto justify-center overflow-hidden shadow-md -mt-20 border-4 border-[#FCE9D1] transition-transform duration-500 hover:scale-110">
-                    <img src="images/roti-goreng-aja.svg" alt="Roti Goreng"
-                        class="w-full bg-white p-7 rounded-4xl h-[400px] object-cover transition-transform duration-500 hover:scale-110">
-                </div>
-                <h2
-                    class="text-2xl font-extrabold text-[#A94E04] drop-shadow-[1px_1px_1px_#fff] transition-colors duration-300 hover:text-[#FF9D23]">
-                    Roti Goreng
-                </h2>
-                <p class="text-[#7A3B0C] text-sm leading-relaxed">
-                    Roti goreng empuk dengan isian manis legit yang lumer di mulut, cocok untuk sarapan atau camilan.
-                </p>
-                <p class="font-semibold text-[#7A3B0C]">Harga: Rp. 3500,00</p>
-                <a href="https://wa.me/6285158329255?text=Halo%20saya%20ingin%20tanya%20mengenai%20pemesanan%20Cakwe%20dan%20Roti%20Goreng%20Bantal%20Jaya%20Pak%20Ali%2C%20apa%20bisa%3F"
-                    target="_blank"
-                    class="block bg-gradient-to-r from-[#FF9D23] to-[#FFB648] hover:from-[#ffa737] hover:to-[#ffc76d] text-white font-bold py-2 px-6 rounded-lg shadow-md transition-all duration-300 text-center hover:scale-105 hover:shadow-lg hover:-translate-y-1 active:scale-95">
-                    Pesan Sekarang
-                </a>
-            </div>
         </div>
 
         <div class="relative">

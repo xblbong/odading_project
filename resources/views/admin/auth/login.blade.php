@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
-<body class="bg-gray-50 flex items-center justify-center min-h-screen p-4">
+<body class="bg-white flex items-center justify-center min-h-screen p-4">
 
     <!-- Card Container -->
     <div class="w-full max-w-md bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 relative">
@@ -95,14 +95,10 @@
 
             </form>
         </div>
-        
-        <!-- Footer Card -->
-        <div class="bg-gray-50 px-8 py-4 border-t border-gray-100 text-center">
-            <p class="text-xs text-gray-400">
-                &copy; {{ date('Y') }} Jaya Pak Ali Catering. All rights reserved.
-            </p>
-        </div>
+        {{-- footer --}}
+        @include('admin.layouts.footer')
     </div>
+
 
     <!-- Script Show/Hide Password -->
     <script>
