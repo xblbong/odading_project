@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\AdminDashboardController;
 use App\Http\Controllers\AdminProductController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\PublicOrderController;
 use App\Models\Menu;
 use Illuminate\Support\Facades\Route;
@@ -30,6 +31,10 @@ Route::middleware('guest')->group(function () {
 // Form Order
 Route::get('/order', [PublicOrderController::class, 'index'])->name('order.index');
 Route::post('/order', [PublicOrderController::class, 'store'])->name('order.store');
+
+// Payment (Midtrans)
+Route::post('/payment/notification', [PaymentController::class, 'notification'])->name('payment.notification');
+Route::get('/payment/success/{orderId}', [PaymentController::class, 'success'])->name('payment.success');
 
 // Admin Routes (Harusnya diproteksi middleware auth, tapi ini basic dulu)
 Route::middleware('auth')->group(function () {
